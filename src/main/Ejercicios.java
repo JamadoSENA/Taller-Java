@@ -10,15 +10,16 @@ public class Ejercicios {
 		
 		int edad1, edad2, edad3, promedio, 
 		sueldo=1300000, comision1, comision2, comision3, 
-		horas, HN, HE, HI;
+		horas, HN, HE, HI, NA;
 		
 		float primeraP, segundaP, terceraP, examenF, trabajoF, 
 		promedioF, metros, valorH, HNP, HEP, N1, N2, N3, N4, N5,
-		N6, N7, N8, AKT, AAKT, PKT, PVP, PA;
+		N6, N7, N8, AKT, AAKT, PKT, PVP, PA, NAD, BST, KGH, LA,
+		BHP, EAP, KHD, LAD;
 		
 		double totalComision, pf, pef, ptf, cf, pulgadas, pies, 
 		sueldoF, SB, AS, DE, SN, dineroT, consumo, KTT, VFP, PP,
-		GPA, TPA, PPA;
+		GPA, TPA, PPA, CT, G, PG, IH, LH, IHD, IAD, IT;
 
 		Scanner lapiz = new Scanner(System.in);
 
@@ -243,9 +244,61 @@ public class Ejercicios {
 	    //Ejercicio 21
 	    System.out.println("***Ejercicio 21***");
 	    
+	    System.out.println("Ingrese la cantidad de naranjas: ");
+	    NA=lapiz.nextInt();
+	    
+	    System.out.println("Ingrese el valor BS por docena de naranjas: ");
+	    NAD=lapiz.nextFloat();
+	    
+	    System.out.println("Ingrese el total en BS: ");
+	    BST=lapiz.nextFloat();
+	    
+	    CT=NA*(NAD/12);
+	    
+	    G=NA-CT;
+	    
+	    PG=(G/CT)*100;
+	    
+	    System.out.println("El porcentaje de ganancia es igual a: " + PG);
+	    
 	    //Ejercicio 23
 	    System.out.println("***Ejercicio 23***");
+	    
+	    System.out.println("Ingrese la cantidad de harina en KG: ");
+	    KGH=lapiz.nextFloat();
+	    
+	    System.out.println("Ingrese la cantidad de aceite en Litros: ");
+	    LA=lapiz.nextFloat();
 
+	    System.out.println("Ingrese el precio por bulto de 24 paquetes de harina en BS: ");
+	    BHP=lapiz.nextFloat();
+	    
+	    System.out.println("Ingrese el precio por caja de 15 envases de aceite en BS: ");
+	    EAP=lapiz.nextFloat();
+	    
+	    System.out.println("Ingrese el precio por kilogramo de harina al detal en BS: ");
+	    KHD=lapiz.nextFloat();
+	    
+	    System.out.println("Ingrese el precio por litro de aceite al detal en BS: ");
+	    LAD=lapiz.nextFloat();
+	    
+	    IH=(KGH/24)*BHP;
+	    
+	    LH=(LA/15)*EAP;
+	    
+	    IHD=(KGH%24)*KHD;
+	    
+	    IAD=(LA%15)*LAD;
+	    
+	    IT=IH+LH+IHD+IAD;
+	    
+	    System.out.println("El total por la venta de cada tonelada de maíz es igual a: " + IT);
+
+	    //Ejercicio 25
+	    System.out.println("***Ejercicio 25***");
+	    
+	    
+	    
 	    
 	}
 
