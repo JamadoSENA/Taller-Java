@@ -17,11 +17,12 @@ public class Ejercicios {
 		float primeraP, segundaP, terceraP, examenF, trabajoF, 
 		promedioF, metros, valorH, HNP, HEP, N1, N2, N3, N4, N5,
 		N6, N7, N8, AKT, AAKT, PKT, PVP, PA, NAD, BST, KGH, LA,
-		BHP, EAP, KHD, LAD, SBS, V1, V2, V3;
+		BHP, EAP, KHD, LAD, SBS, V1, V2, V3, VD1, VD2, VD3, SM;
 		
 		double totalComision, pf, pef, ptf, cf, pulgadas, pies, 
 		sueldoF, SB, AS, DE, SN, dineroT, consumo, KTT, VFP, PP,
-		GPA, TPA, PPA, CT, G, PG, IH, LH, IHD, IAD, IT, SBSA, SBSB;
+		GPA, TPA, PPA, CT, G, PG, IH, LH, IHD, IAD, IT, SBSA, SBSB,
+		UV, IP1, IP2, IP3;
 
 		Scanner lapiz = new Scanner(System.in);
 
@@ -331,16 +332,65 @@ public class Ejercicios {
 	    System.out.println("***Ejercicio 27***");
 	    
 	    System.out.println("Ingrese el valor 1:");
-        V1 = lapiz.nextFloat();
+        V1=lapiz.nextFloat();
 
         System.out.println("Ingrese el valor 2:");
-        V2 = lapiz.nextFloat();
+        V2=lapiz.nextFloat();
 
         System.out.println("Ingrese el valor 3:");
-        V3 = lapiz.nextFloat();
+        V3=lapiz.nextFloat();
+        
+        if (V1*V2/2 == V3) {
+        	
+            System.out.println("Triángulo.");
+            
+        } else if (Math.PI * Math.pow(V1, 2)==V3) {
+        	
+            System.out.println("Círculo.");
+            
+        } else if (V1*V2==V3) {
+        	
+            System.out.println("Rectángulo.");
+            
+        } else {
+        	
+            System.out.println("Digite valores validos.");
+            
+        }
 	    
-	    
-	    
+        //Ejercicio 29
+        System.out.println("***Ejercico 29***");
+        
+        System.out.println("Ingrese las ventas para el Departamento 1:");
+        VD1=lapiz.nextFloat();
+
+        System.out.println("Ingrese las ventas para el Departamento 2:");
+        VD2=lapiz.nextFloat();
+
+        System.out.println("Ingrese las ventas para el Departamento 3:");
+        VD3=lapiz.nextFloat();
+        
+        System.out.println("Ingrese el valor del salario mensual: ");
+        SM=lapiz.nextFloat();
+
+        // Calcular el 33% de las ventas totales
+        UV = 0.33*(VD1+VD2+VD3);
+        
+        // Calcular el incentivo adicional y el total a recibir por cada vendedor
+        
+        if (VD1 > UV) {
+            IP1 = 0.2 * SM;
+        }
+        
+        if (VD2 > UV) {
+            IP2 = 0.2 * SM;
+        }
+        
+        if (VD3 > UV) {
+            IP3 = 0.2 * SM;
+        }
+
+        
 	}
 
 }
