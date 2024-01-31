@@ -1,11 +1,13 @@
 package main;
 
 import java.util.Scanner;
+import java.math.*;
 
 public class Ejercicios {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 		String nombre;
 		
 		int edad1, edad2, edad3, promedio, 
@@ -15,11 +17,11 @@ public class Ejercicios {
 		float primeraP, segundaP, terceraP, examenF, trabajoF, 
 		promedioF, metros, valorH, HNP, HEP, N1, N2, N3, N4, N5,
 		N6, N7, N8, AKT, AAKT, PKT, PVP, PA, NAD, BST, KGH, LA,
-		BHP, EAP, KHD, LAD;
+		BHP, EAP, KHD, LAD, SBS, V1, V2, V3;
 		
 		double totalComision, pf, pef, ptf, cf, pulgadas, pies, 
 		sueldoF, SB, AS, DE, SN, dineroT, consumo, KTT, VFP, PP,
-		GPA, TPA, PPA, CT, G, PG, IH, LH, IHD, IAD, IT;
+		GPA, TPA, PPA, CT, G, PG, IH, LH, IHD, IAD, IT, SBSA, SBSB;
 
 		Scanner lapiz = new Scanner(System.in);
 
@@ -282,13 +284,19 @@ public class Ejercicios {
 	    System.out.println("Ingrese el precio por litro de aceite al detal en BS: ");
 	    LAD=lapiz.nextFloat();
 	    
+	    //Calcular el ingreso por la venta de paquetes de harina y cajas de aceite
+	    
 	    IH=(KGH/24)*BHP;
 	    
 	    LH=(LA/15)*EAP;
 	    
+	    //Calcular el ingreso por la venta de harina y aceite al detal
+	    
 	    IHD=(KGH%24)*KHD;
 	    
 	    IAD=(LA%15)*LAD;
+	    
+	    //Calcular el ingreso total
 	    
 	    IT=IH+LH+IHD+IAD;
 	    
@@ -297,6 +305,39 @@ public class Ejercicios {
 	    //Ejercicio 25
 	    System.out.println("***Ejercicio 25***");
 	    
+	    System.out.println("Ingrese el sueldo del trabajador en BS: ");
+	    
+	    SBS=lapiz.nextFloat();
+	    
+	    if(SBS<40000){
+	    	
+	    	SBSA=SBS*0.15;
+	    	
+	    	System.out.println("Su sueldo es igual a: " + SBSA);
+	    	
+	    }else if(SBS>40000) {
+	    
+	    	SBSB=SBS*0.15;
+	    	
+	    	System.out.println("Su sueldo es igual a: " + SBSB);
+	    	
+	    }else { 
+	    	
+	    	System.out.println("Digite un sueldo valido.");
+	    	
+	    }
+	    
+	    //Ejercicio 27
+	    System.out.println("***Ejercicio 27***");
+	    
+	    System.out.println("Ingrese el valor 1:");
+        V1 = lapiz.nextFloat();
+
+        System.out.println("Ingrese el valor 2:");
+        V2 = lapiz.nextFloat();
+
+        System.out.println("Ingrese el valor 3:");
+        V3 = lapiz.nextFloat();
 	    
 	    
 	    
